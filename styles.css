@@ -1,0 +1,93 @@
+html, body{
+	padding: 0;
+	margin: 0;
+}
+html{
+	height: 100%;
+
+	background-image: url("./images/bg_tiled.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+body  {
+	min-width: 105px;
+	min-height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	width: 750px;
+	height: 750px;
+
+	background-image: url("./images/bg_main.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+@media (max-width: 789px), (max-height: 789px) {
+	main {
+		width: 95vmin;
+		height: 95vmin;
+	}
+}
+@media (max-width: 105px), (max-height: 105px) {
+	main {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+
+#title {
+	padding-top: 20.5%;
+	padding-bottom: 2%;
+	width: 56%;
+}
+
+#buttongrid {
+	width: 65%;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+
+	row-gap: 15%;
+}
+
+#buttongrid > a {
+	width: 85%;
+}
+@media (max-width: 570px), (max-height: 570px) {
+	#title {
+		padding-bottom: 0;
+	}
+	#buttongrid {
+		width: 75%;
+		row-gap: 0;
+	}
+	#buttongrid > a {
+		width: 100%;
+	}
+}
+
+#buttongrid > a > img {
+	width: 100%;
+	transition: transform 0.05s ease-in, filter 0.05s ease-in, -webkit-filter 0.05s ease-in;
+}
+
+#buttongrid > a:hover > img {
+	transform: rotate(-2.5deg) translate(0,-5%);
+	transition: transform 0s;
+
+	filter: brightness(1.015) drop-shadow(5px 5px 5px #22222211);
+	-webkit-filter: brightness(1.015) drop-shadow(5px 5px 5px #22222211);
+}
