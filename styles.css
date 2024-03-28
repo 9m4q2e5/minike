@@ -52,6 +52,18 @@ main {
 	width: 56%;
 }
 
+#buttonhint {
+	padding-top: 0%;
+	padding-bottom: 0%;
+	width: 30%;
+}
+
+#footer {
+	padding-top: 4%;
+	padding-bottom: 0%;
+	width: 43%;
+}
+
 #buttongrid {
 	width: 65%;
 
@@ -60,7 +72,7 @@ main {
 	justify-items: center;
 	align-items: center;
 
-	row-gap: 15%;
+	row-gap: 3%;
 }
 
 #buttongrid > a {
@@ -76,6 +88,12 @@ main {
 	}
 	#buttongrid > a {
 		width: 100%;
+	}
+	#buttonhint {
+		width: 35%;
+	}
+	#footer {
+		display: none;
 	}
 }
 
